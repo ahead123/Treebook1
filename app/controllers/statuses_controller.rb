@@ -69,7 +69,7 @@ class StatusesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def status_params
-      params.require(:status).permit( :content, :user_id)
+      params.require(:status).permit( :content, :user_id, :user, :first_name, :last_name, :full_name)
     end
 
 end
