@@ -73,7 +73,7 @@ class UserFriendshipsController < ApplicationController
 
 	def destroy
 		@user_friendship = current_user.user_friendships.find(params[:id])		
-		if @user_friendship.destroy
+		if @user_friendship.delete
 		flash[:success] = "Friendship destroyed"
 		end
 		redirect_to user_friendships_path
