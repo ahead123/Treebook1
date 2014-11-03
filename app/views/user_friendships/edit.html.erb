@@ -1,0 +1,37 @@
+<div class="container-fluid text-center">
+<div class="page-header">
+	<h1>Viewing Friendships</h1>
+</div>
+<div class="row well">
+	<div class="avatar col-md-2 col-md-offset-3">
+		<%= image_tag @user_friendship.user.gravatar_url %><br />
+		<%= @user_friendship.user.first_name %>
+	</div>
+	<div class="avatar col-md-2 col-md-offset-2">
+		<%= image_tag @user_friendship.user.gravatar_url %><br />
+		<%= @user_friendship.user.first_name %>
+	</div>
+</div>
+
+<hr />
+
+<h3><%= @user_friendship.sub_message %></h3>
+
+
+<div class="col-md-4 col-md-offset-4  form-actions well">
+	<% if @user_friendship.requested? %>
+		<%= form_for @user_friendship, url: accept_user_friendship_path(@user_friendship), method: :put do |form| %>
+		<%= submit_tag "Accept Friendship", class: "btn btn-primary" %>
+	<% end %><br />
+<% end %>
+	
+	<%= form_for @user_friendship, url: block_user_friendship_path(@user_friendship), method: :put do |form| %>
+		<%= submit_tag "Block Friendship", class: "btn btn-warning" %>
+	<% end %><br />
+
+	<%= form_for @user_friendship, url: user_friendship_path(@user_friendship), method: :delete do |form| %>
+		<%= submit_tag "Delete Friendship", class: "btn btn-danger" %>
+	<% end %>
+
+</div>
+</div>

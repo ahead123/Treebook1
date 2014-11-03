@@ -17,7 +17,13 @@ Rails.application.routes.draw do
   end
 
 
-  resources :user_friendships
+  resources :user_friendships do
+    member do
+      put :accept
+      put :block
+     
+    end
+  end
 
   resources :statuses
   get 'feed', to: 'statuses#index', as: :feed

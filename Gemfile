@@ -23,9 +23,12 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'devise'
 gem 'simple_form'
 gem 'state_machine', :git => 'https://github.com/seuros/state_machine.git'
+gem 'draper', '~> 1.0'
+gem 'js-routes'
 
 group :test do
 gem 'shoulda'
+gem 'factory_girl_rails'
 end
 
 # Use jquery as the JavaScript library

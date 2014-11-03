@@ -1,12 +1,14 @@
-<div class="page-header">
-  <h1>All of the Statuses</h1>
+<div class="page-header text-center">
+  <h1 class="text-info">All of the Statuses</h1>
 </div>
 
-<%= link_to "Post a New Status", new_status_path, class: "btn btn-success" %>
-
+<div class="row well">
+<div class="col-md-5 text-center col-xs-4"></div>
+<%= link_to "Post a New Status", new_status_path, class: "btn btn-lg btn-success" %>
+</div>
 <% @statuses.each do |status| %>
 <div class="container-fluid">
-  <div class="status row">
+  <div class="status row well">
     <div class="col-md-1">
       <%= link_to image_tag(status.user.gravatar_url), profile_path(status.user) %>
     </div>
