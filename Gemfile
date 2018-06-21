@@ -13,7 +13,7 @@ group :production do
 	gem 'rails_12factor'
 end
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
+gem 'sass-rails', '~> 4.0.5'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -24,7 +24,7 @@ gem 'devise'
 gem 'simple_form'
 gem 'state_machine', :git => 'https://github.com/seuros/state_machine.git'
 gem 'draper', '~> 1.0'
-gem 'js-routes'
+gem 'js-routes', '>= 0.9.9'
 
 group :test do
 gem 'shoulda'
