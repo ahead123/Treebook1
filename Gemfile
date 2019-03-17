@@ -20,7 +20,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
-gem 'devise'
+gem 'devise', '>= 4.6.0'
 gem 'simple_form'
 gem 'state_machine', :git => 'https://github.com/seuros/state_machine.git'
 gem 'draper', '~> 1.0'
